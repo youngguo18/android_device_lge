@@ -51,6 +51,17 @@ TARGET_BOARD_PLATFORM := msmnile
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
 TARGET_USES_QCOM_BSP := true
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    product \
+    system \
+    vendor \
+    vbmeta
+
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
