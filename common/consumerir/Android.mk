@@ -26,7 +26,6 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     libxml2 \
     libhidlbase \
-    libhidltransport \
     libhardware \
     libutils \
     android.hardware.ir@1.0 \
