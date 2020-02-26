@@ -29,6 +29,9 @@ vendor.lge.faceprint.use.camera                     u:object_r:vendor_camera_pro
 # Charger
 #persist.vendor.lge.service.chg_mode                 u:object_r:power_prop:s0
 
+# Fastbootd
+ro.fastbootd.available                 u:object_r:exported_default_prop:s0
+
 # LGE Misc
 ro.vendor.lge.build.target_country                  u:object_r:vendor_lge_misc_prop:s0
 ro.vendor.lge.build.target_operator                 u:object_r:vendor_lge_misc_prop:s0

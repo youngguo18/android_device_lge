@@ -132,6 +132,9 @@ persist.vendor.dpm.feature=0
 # DRM
 drm.service.enabled=true
 
+# fastbootd
+ro.fastbootd.available=true
+
 # Fingerprint
 persist.vendor.qfp=true
 
