@@ -333,3 +333,5 @@
 57:4294967295:1000
 /* [LGE_GNSS] LGP_GNSS_0107, LGP_GNSS_DEVICE_SEC_CONIFIGURATION, 2018.08.08, youngseok.ko Allow VSS GNSS service to be used by system and net_raw processes */
 704:4294967295:1000:3004
+/* Time-services */
+22:4294967295:3004:1000
