@@ -9,3 +9,5 @@ allow gestures_app ashmem_device_service:service_manager find;
 
 allow gestures_app system_app_data_file:dir rw_dir_perms;
 allow gestures_app system_app_data_file:file { rw_file_perms create rename setattr unlink };
+
+allow gestures_app cgroup:file w_file_perms;

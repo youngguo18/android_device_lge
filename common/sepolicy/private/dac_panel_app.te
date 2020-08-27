@@ -14,3 +14,5 @@ allow dac_panel_app { activity_service activity_task_service
                       gpu_service surfaceflinger_service }:service_manager find;
 
 allow dac_panel_app hal_dac_control_hwservice:hwservice_manager find;
+
+allow dac_panel_app cgroup:file w_file_perms;
