@@ -21,4 +21,7 @@
     <!-- Set the automatic brightness mode on by default -->
     <bool name="def_screen_brightness_automatic_mode">true</bool>
 
+    <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
+    <dimen name="rounded_corner_radius_adjustment">19px</dimen>
+
 </resources>
