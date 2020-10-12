@@ -11,7 +11,8 @@ allow dac_panel_app system_app_data_file:file { rw_file_perms create rename seta
 allow dac_panel_app { activity_service activity_task_service
                       ashmem_device_service audio_service
                       audioserver_service autofill_service
-                      gpu_service surfaceflinger_service }:service_manager find;
+                      gpu_service media_session_service
+                      surfaceflinger_service }:service_manager find;
 
 allow dac_panel_app hal_dac_control_hwservice:hwservice_manager find;
 
