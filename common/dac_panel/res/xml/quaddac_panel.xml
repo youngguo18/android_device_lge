@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        app:key="quaddac_switch"
+        app:summaryOn="@string/quad_dac_on"
+        app:summaryOff="@string/quad_dac_off"
+        app:title="@string/quad_dac"
+        app:isPreferenceVisible="false" />
+
+    <PreferenceCategory
+        app:title="@string/quad_dac_settings" >
+
+        <ListPreference
+            app:key="hifi_mode_dropdown"
+            app:title="@string/hifi_mode"
+            app:summary="%s"
+            app:entries="@array/hifi_mode_entry_values"
+            app:entryValues="@array/hifi_mode_entry_values"
+            app:isPreferenceVisible="false" />
+
+        <SeekBarPreference
+            app:key="avc_volume_seekbar"
+            app:title="@string/avc_volume"
+            app:summary="@string/avc_volume_summary"
+            app:showSeekBarValue="true"
+            app:min="-24"
+            android:max="0"
+            app:defaultValue="-14"
+            app:isPreferenceVisible="false" />
+
+        <ListPreference
+            app:key="sound_preset_dropdown"
+            app:title="@string/sound_preset"
+            app:summary="%s"
+            app:entries="@array/sound_preset_entry_values"
+            app:entryValues="@array/sound_preset_entry_values"
+            app:isPreferenceVisible="false" />
+
+        <ListPreference
+            app:key="digital_filter_dropdown"
+            app:title="@string/digital_filter"
+            app:summary="%s"
+            app:entries="@array/digital_filter_entry_values"
+            app:entryValues="@array/digital_filter_entry_values"
+            app:isPreferenceVisible="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/quad_dac_balance" >
+
+        <org.lineageos.settings.device.dac.ui.BalancePreference
+            app:key="balance"
+            app:summary="@string/quad_dac_balance_summary"
+            app:title=""
+            app:isPreferenceVisible="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+

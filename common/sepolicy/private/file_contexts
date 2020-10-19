@@ -1,0 +1,2 @@
+# Sysfs
+/sys/devices/virtual/input/lge_touch/lpwg_notify                            u:object_r:sysfs_gestures:s0

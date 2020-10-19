@@ -1,0 +1,16 @@
+type dac_panel_app, domain;
+
+app_domain(dac_panel_app)
+
+binder_call(dac_panel_app, hal_dac_control_default)
+binder_call(dac_panel_app, gpuservice)
+
+allow dac_panel_app system_app_data_file:dir { rw_dir_perms create };
+allow dac_panel_app system_app_data_file:file { rw_file_perms create rename setattr unlink };
+
+allow dac_panel_app { activity_service activity_task_service
+                      ashmem_device_service audio_service
+                      audioserver_service autofill_service
+                      gpu_service surfaceflinger_service }:service_manager find;
+
+allow dac_panel_app hal_dac_control_hwservice:hwservice_manager find;

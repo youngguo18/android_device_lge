@@ -1,0 +1,18 @@
+#
+# vendor props for lge flash-common
+#
+
+# Audio
+persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.lge.audio.voice.clarity=off
+
+# Camera
+ro.vendor.lge.aux.camera=2
+ro.vendor.lge.physical.camera=5
+
+# LGE Misc
+ro.vendor.lge.build.target_country=COM
+ro.vendor.lge.build.target_operator=LAO
+ro.vendor.lge.capp_cupss.op.dir=/product/OP
+ro.vendor.lge.capp_cupss.persistlg.dir=/mnt/vendor/persist-lg
+ro.vendor.lge.capp_cupss.rootdir=/product/OP

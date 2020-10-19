@@ -1,0 +1,2 @@
+type vendor_dac_control_prop, property_type;
+type vendor_vibrator_prop, property_type;

@@ -1,0 +1,60 @@
+# This file is imported by init.{ro.hardware}.rc
+
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    wait /dev/block/bootdevice
+    start hwservicemanager
+    mount_all /vendor/etc/fstab.${ro.hardware} --early
+
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    restorecon /mnt/vendor/persist
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+
+    chown system system /mnt/vendor/absolute
+    chmod 0750 /mnt/vendor/absolute
+    restorecon /mnt/vendor/absolute
+    restorecon_recursive /mnt/vendor/absolute
+
+    chown system system /mnt/vendor/persist-lg
+    chmod 0771 /mnt/vendor/persist-lg
+    restorecon /mnt/vendor/persist-lg
+    restorecon_recursive /mnt/vendor/persist-lg
+
+    chown system system /mnt/vendor/sns
+    chmod 0755 /mnt/vendor/sns
+    restorecon /mnt/vendor/sns
+    restorecon_recursive /mnt/vendor/sns
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.${ro.hardware} --late
+
+on post-fs
+    chown system system /vendor/mpt
+    chmod 0775 /vendor/mpt
+
+    chown system system /vendor/persist-lg
+    chmod 0771 /vendor/persist-lg
+
+    chown system system /vendor/sns
+    chmod 0755 /vendor/sns
+
+    chown system system /vendor/fota
+    chmod 0755 /vendor/fota
+
+    chown root system /sys/module/lge_handle_panic/parameters/gen_adsp_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_bug
+    chown root system /sys/module/lge_handle_panic/parameters/gen_cdsp_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_modem_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_esoc0_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_slpi_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_venus_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_wdt_bark
+    chown root system /sys/module/lge_handle_panic/parameters/gen_wdt_bite
+

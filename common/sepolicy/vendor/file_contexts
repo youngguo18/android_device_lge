@@ -1,0 +1,12 @@
+# Devices
+/dev/tspdrv         u:object_r:vibrator_device:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/vendor\.lge\.hardware\.audio\.dac\.control@1\.0-service                  u:object_r:hal_dac_control_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.2-service\.lge                            u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.2-service\.lge                                  u:object_r:hal_ir_default_exec:s0
+
+# Sysfs
+/sys/bus/i2c/drivers/es9218-codec(/.*)?                                     u:object_r:sysfs_dac:s0
+/sys/bus/i2c/drivers/es9218-codec/[0-9]-0048(/.*)?                          u:object_r:sysfs_dac:s0
+/sys/devices/platform/soc/[0-9a-f]+\.i2c/i2c-[0-9]/[0-9]-0048(/.*)?         u:object_r:sysfs_dac:s0
