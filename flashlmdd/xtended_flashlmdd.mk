@@ -23,17 +23,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from flashlmdd device
 $(call inherit-product, device/lge/flashlmdd/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Xtended stuff.
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Device identifiers
 
-PRODUCT_NAME := lineage_flashlmdd
+PRODUCT_NAME := xtended_flashlmdd
 PRODUCT_DEVICE := flashlmdd
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RELEASE_NAME := V50 ThinQ
 PRODUCT_MODEL := LM-V500
+
+# Maintainer
+XTENDED_MAINTAINER := youngguo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lge
 
