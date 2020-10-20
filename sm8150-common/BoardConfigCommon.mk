@@ -129,9 +129,6 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 TARGET_INIT_VENDOR_LIB := libinit_lge_msmnile
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_msmnile
 
-# Keystore
-TARGET_PROVIDES_KEYMASTER := true
-
 # Media
 TARGET_PROVIDES_LIBPLATFORMCONFIG := true
 
