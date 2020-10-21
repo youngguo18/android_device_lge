@@ -504,6 +504,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.supplicant@2.0.vendor \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     wifi-mac-generator \
+    TetheringConfigOverlay.lge_sm8150 \
     WifiOverlay.lge_sm8150 \
     wpa_cli \
     wpa_supplicant \
