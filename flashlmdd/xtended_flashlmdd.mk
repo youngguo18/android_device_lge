@@ -27,6 +27,7 @@ $(call inherit-product, device/lge/flashlmdd/device.mk)
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Device identifiers
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := xtended_flashlmdd
 PRODUCT_DEVICE := flashlmdd
