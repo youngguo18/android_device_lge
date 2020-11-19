@@ -59,4 +59,7 @@
     <integer name="config_qs_rows_portrait">3</integer>
     <integer name="config_qs_columns_landscape">5</integer>
     <integer name="config_qs_rows_landscape">2</integer>
+
+    <!-- The CPU temperature divider, if needed -->
+    <integer name="config_cpuTempDivider" translatable="false">1000</integer>
 </resources>
