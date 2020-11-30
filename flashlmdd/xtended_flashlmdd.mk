@@ -28,6 +28,7 @@ $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Device identifiers
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DISABLES_GAPPS :=true
 
 PRODUCT_NAME := xtended_flashlmdd
 PRODUCT_DEVICE := flashlmdd
