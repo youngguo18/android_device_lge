@@ -331,7 +331,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxVidcCommon \
-    libstagefrighthw
+    libstagefrighthw \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 # Permission
 PRODUCT_COPY_FILES += \
