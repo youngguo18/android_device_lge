@@ -207,10 +207,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
 # DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.3-service.clearkey
+PRODUCT_PACKAGES += android.hardware.drm@1.3-service.clearkey
 
 # Doze
 PRODUCT_PACKAGES += \
