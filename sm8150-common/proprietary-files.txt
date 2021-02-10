@@ -1255,9 +1255,11 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk;PRESIGNED
+-vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
+vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
 
 # Touchcompanion
 lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
