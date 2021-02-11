@@ -187,8 +187,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.msmnile \
     hwcomposer.msmnile \
-    libdisplayconfig \
-    libdisplayconfig.vendor \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
@@ -516,7 +516,11 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl
+    libnl \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libminijail
+
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
