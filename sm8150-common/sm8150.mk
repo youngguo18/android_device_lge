@@ -212,6 +212,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.protected_contents=true
 
+# Dex
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
+
 # DRM
 PRODUCT_PACKAGES += android.hardware.drm@1.3-service.clearkey
 
