@@ -272,7 +272,6 @@ vendor/lib/libsdm-colormgr-algo.so|f630c702d4af4eb8186c97539144bf59a3f1c278
 vendor/lib/libsdm-disp-vndapis.so|c1d35866f727527d4d0758e292b68449bd79d96e
 vendor/lib/libsdmcore.so|f0510cec1654041d9bc209305e0abac4215cdb71
 vendor/lib/libsdmextension.so|c5ab5c1d2faa711e5fce243e884b5a3f91d31c04
-vendor/lib/unnhal-acc-hta.so|c334e780d3a709ee5f9f5bbda4de6231dc96fb50
 vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so|740f0bfd4af3cac02ba1818e2bd350bd458f4d09
 vendor/lib64/libdisplayqos.so|de9730ecf123f99c182507188e7d403999f088bf
 vendor/lib64/libdpps.so|73c512bdbd0c885b1279b51022b0be04fd780e16
@@ -286,7 +285,6 @@ vendor/lib64/libsdmcore.so|741cd29abd7ad1f88452fa4fd47c593db100845e
 vendor/lib64/libsdmextension.so|c270614f326f0d3a0b955bc51aece82d234b43d2
 vendor/lib64/unnhal-acc-adreno.so|f06890d0ec0383edba2570a594c332d55463dad0
 vendor/lib64/unnhal-acc-common.so|71e00ad2945d508eae014f397c59188ddb75a82b
-vendor/lib64/unnhal-acc-hta.so|a696bac54237044c3b2703e5660eafd20fd62229
 vendor/lib64/unnhal-acc-hvx.so|6163997e431717640be4df58be8865259b5aa0d2
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so|0552f15a6c16ba8af86c76069b3308c88732b165
 
@@ -613,10 +611,13 @@ vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Machine learning
+vendor/bin/npu_launcher
 vendor/lib/libnpu.so
 vendor/lib/libopenvx.so
 vendor/lib64/libnpu.so
 vendor/lib64/libopenvx.so
+vendor/lib64/libhta_hexagon_runtime.so
+vendor/lib64/unnhal-acc-hta.so
 
 # Media
 lib/libFileMux.so
