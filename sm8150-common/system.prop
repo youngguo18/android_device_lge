@@ -20,6 +20,9 @@ ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
 persist.sys.sf.disable_blurs=0
 
+# GBoard Spacing
+ro.com.google.ime.kb_pad_port_b=1
+
 # GMS
 ro.com.google.clientidbase.ms=android-lge-rev1
 
