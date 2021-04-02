@@ -53,6 +53,7 @@ TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 -include frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk
 	
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
