@@ -166,11 +166,6 @@ PRODUCT_PACKAGES += \
     Snap \
     vendor.qti.hardware.camera.device@1.0.vendor
 
-# CNE
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -415,13 +410,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor
 
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml
-
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -464,10 +452,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
 
 # Update engine
 PRODUCT_PACKAGES += \
