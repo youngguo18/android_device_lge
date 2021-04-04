@@ -160,6 +160,7 @@ debug.sf.late.sf.duration=10500000
 debug.sf.late.app.duration=20500000
 debug.sf.use_phase_offsets_as_durations=1
 persist.demo.hdmirotationlock=false
+persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
@@ -170,6 +171,10 @@ vendor.gralloc.disable_ubwc=0
 
 # Keystore
 ro.hardware.keystore_desede=true
+
+# PASR
+vendor.pasr.activemode.enabled=true
+vendor.power.pasr.enabled=false
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
