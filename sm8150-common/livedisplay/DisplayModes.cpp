@@ -14,8 +14,13 @@
  * limitations under the License.
  */
 
+#define LOG_TAG "DisplayModesService"
+
 #include "DisplayModes.h"
+
 #include <android-base/logging.h>
+#include <android-base/properties.h>
+
 #include <fstream>
 
 namespace vendor {
@@ -24,19 +29,18 @@ namespace livedisplay {
 namespace V2_0 {
 namespace implementation {
 
-static constexpr const char* kModePath = "/sys/devices/virtual/panel/img_tune/screen_mode";
-static constexpr const char* kDefaultPath = "/data/vendor/display/default_screen_mode";
+static constexpr const char* kDisplayModeProp = "vendor.display.mode";
+static const std::string kModeBasePath = "/sys/class/drm/card0-DSI-1/";
+static const std::string kDefaultPath = "/data/vendor/display/default_display_mode";
 
 const std::map<int32_t, DisplayModes::ModeInfo> DisplayModes::kModeMap = {
-    {0, {"Cinema", "1"}},
-    {1, {"Sports", "4"}},
-    {2, {"Game", "5"}},
-    {3, {"Photos", "2"}},
-    {4, {"Web", "3"}},
-//    {5, {"Expert", "10"}},
+    {0, {"Standard", "default"}},
+    {1, {"DCI P3", "native_display_p3_mode"}},
+    {2, {"Wide Color", "native_display_wide_color_mode"}},
+    {3, {"sRGB", "native_display_srgb_color_mode"}},
 };
 
-DisplayModes::DisplayModes() {
+DisplayModes::DisplayModes() : mDefaultModeId(0) {
     std::ifstream defaultFile(kDefaultPath);
     std::string value;
 
@@ -47,18 +51,19 @@ DisplayModes::DisplayModes() {
     }
 
     for (const auto& entry : kModeMap) {
-        if (value == entry.second.value) {
+        // Check if default mode is a valid mode
+        if (value == std::to_string(entry.first)) {
             mDefaultModeId = entry.first;
+            android::base::SetProperty(kDisplayModeProp, entry.second.node);
             break;
         }
     }
-
-    setDisplayMode(mDefaultModeId, false);
 }
 
 // Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
 Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
     std::vector<DisplayMode> modes;
+
     for (const auto& entry : kModeMap) {
         modes.push_back({entry.first, entry.second.name});
     }
@@ -68,13 +73,17 @@ Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
 
 Return<void> DisplayModes::getCurrentDisplayMode(getCurrentDisplayMode_cb resultCb) {
     int32_t currentModeId = mDefaultModeId;
-    std::ifstream modeFile(kModePath);
     std::string value;
 
-    modeFile >> value;
-    if (!modeFile.fail()) {
-        for (const auto& entry : kModeMap) {
-            if (value == entry.second.value) {
+    for (const auto& entry : kModeMap) {
+        if (entry.first == 0) {
+            continue;
+        }
+
+        std::ifstream modeFile(kModeBasePath + entry.second.node);
+        if (!modeFile.fail()) {
+            modeFile >> value;
+            if (value == "1") {
                 currentModeId = entry.first;
                 break;
             }
@@ -90,28 +99,43 @@ Return<void> DisplayModes::getDefaultDisplayMode(getDefaultDisplayMode_cb result
 }
 
 Return<bool> DisplayModes::setDisplayMode(int32_t modeID, bool makeDefault) {
+    // Disable all modes
+    for (const auto& entry : kModeMap) {
+        if (entry.first == 0) {
+            continue;
+        }
+
+        std::ofstream modeFile(kModeBasePath + entry.second.node);
+        if (!modeFile.fail()) {
+            modeFile << 0;
+        }
+    }
     const auto iter = kModeMap.find(modeID);
     if (iter == kModeMap.end()) {
         return false;
     }
-    std::ofstream modeFile(kModePath);
-    modeFile << iter->second.value;
-    if (modeFile.fail()) {
-        return false;
+    if (modeID != 0) {
+        std::ofstream modeFile(kModeBasePath + iter->second.node);
+        modeFile << 1;
+        if (modeFile.fail()) {
+            return false;
+        }
+        android::base::SetProperty(kDisplayModeProp, iter->second.node);
     }
 
     if (makeDefault) {
         std::ofstream defaultFile(kDefaultPath);
-        defaultFile << iter->second.value;
+        defaultFile << iter->first;
         if (defaultFile.fail()) {
             return false;
         }
         mDefaultModeId = iter->first;
     }
+
     return true;
 }
 
-}  // namespace sdm
+}  // namespace implementation
 }  // namespace V2_0
 }  // namespace livedisplay
 }  // namespace lineage
