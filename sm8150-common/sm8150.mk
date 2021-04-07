@@ -15,7 +15,7 @@
 #
 
 # Inherit proprietary blobs
-$(call inherit-product-if-exists, vendor/lge/sm8150-common/sm8150-common-vendor.mk)
+$(call inherit-product, vendor/lge/sm8150-common/sm8150-common-vendor.mk)
 
 COMMON_PATH := device/lge/sm8150-common
 
