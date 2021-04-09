@@ -169,6 +169,9 @@ ro.opengles.version=196610
 vendor.display.enable_default_color_mode=1
 vendor.gralloc.disable_ubwc=0
 
+# Incremental FS
+ro.incremental.enable=1
+
 # Keystore
 ro.hardware.keystore_desede=true
 
