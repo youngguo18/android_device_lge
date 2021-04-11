@@ -70,7 +70,7 @@ ro.vendor.qti.va_aosp.support=1
 DEVICE_PROVISIONED=1
 persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
-ro.telephony.default_network=26
+ro.telephony.default_network=20,20
 telephony.lteOnCdmaDevice=1
 
 # RCS
