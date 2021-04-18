@@ -19,8 +19,9 @@ $(call inherit-product-if-exists, vendor/lge/sm8150-common/sm8150-common-vendor.
 
 COMMON_PATH := device/lge/sm8150-common
 
-# define hardware platform
-PRODUCT_PLATFORM := msmnile
+# Board
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := msmnile
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
