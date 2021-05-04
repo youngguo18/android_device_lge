@@ -26,9 +26,6 @@ $(call inherit-product, device/lge/flashlmdd/device.mk)
 # Inherit some common Xtended stuff.
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
-# Inherit Pixel apn
-$(call inherit-product, vendor/xtended/telephony/telephony.mk)
-
 # Device identifiers
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_DISABLES_GAPPS :=true
