@@ -13,6 +13,12 @@ genfscon sysfs /class/lg_rgb_led/use_patterns/blink_patterns                    
 genfscon sysfs /devices/virtual/lg_rgb_led/use_patterns/onoff_patterns          u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/virtual/lg_rgb_led/use_patterns/blink_patterns          u:object_r:sysfs_leds:s0
 
+# Livedisplay
+genfscon sysfs /devices/virtual/panel/img_tune/screen_mode              u:object_r:sysfs_livedisplay_tuneable:s0
+genfscon sysfs /devices/virtual/panel/img_tune/screen_tune              u:object_r:sysfs_livedisplay_tuneable:s0
+genfscon sysfs /devices/virtual/panel/img_tune/rgb_tune                 u:object_r:sysfs_livedisplay_tuneable:s0
+genfscon sysfs /devices/virtual/panel/img_tune/hdr_mode                 u:object_r:sysfs_livedisplay_tuneable:s0
+
 # Sensors
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys2/state    u:object_r:vendor_sysfs_sensors:s0
 
