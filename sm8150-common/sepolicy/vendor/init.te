@@ -10,3 +10,4 @@ allow init { persdata_block_device
 allow init firmware_file:filesystem getattr;
 
 allow init encrypt_block_device:blk_file write;
+allow init sysfs:file { write open};
