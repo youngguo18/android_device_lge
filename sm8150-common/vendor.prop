@@ -211,3 +211,6 @@ ro.config.vc_call_vol_steps=7
 
 # Target specific Netflix custom property
 ro.netflix.bsp_rev=Q855-16947-1
+
+# WLAN
+wifi.aware.interface=wifi-aware0
