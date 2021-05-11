@@ -325,6 +325,12 @@
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
 
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+
+    <!-- Allow devices override audio panel location to the left side -->
+    <bool name="config_audioPanelOnLeftSide">true</bool>
+
     <!-- For Device Info -->
     <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
     <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
