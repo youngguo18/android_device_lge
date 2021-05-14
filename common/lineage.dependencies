@@ -1,7 +1,0 @@
-[
-  {
-    "repository": "SGCMarkus/android_hardware_lge",
-    "target_path": "hardware/lge",
-    "branch": "lineage-17.1"
-  },
-]

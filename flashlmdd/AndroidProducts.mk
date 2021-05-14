@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/xtended_flashlmdd.mk
+    $(LOCAL_DIR)/dot_flashlmdd.mk
 
 COMMON_LUNCH_CHOICES := \
-    xtended_flashlmdd-userdebug \
-    xtended_flashlmdd-eng
+    dot_flashlmdd-userdebug \
+    dot_flashlmdd-eng
