@@ -38,7 +38,9 @@ PRODUCT_RELEASE_NAME := V50 ThinQ
 PRODUCT_MODEL := LM-V500
 
 # Maintainer
-XTENDED_MAINTAINER := youngguo
+XTENDED_BUILD_MAINTAINER = youngguo
+XTENDED_BUILD_DONATE_URL = https://www.paypal.me/youngg168
+XTENDED_BUILD_SUPPORT_URL = https://t.me/youngguo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lge
 
