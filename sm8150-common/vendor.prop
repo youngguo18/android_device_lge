@@ -142,6 +142,7 @@ debug.sdm.support_writeback=0
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.hw=0
+debug.sf.latch_unsignaled=0
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_saturation=1.0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
