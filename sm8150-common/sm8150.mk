@@ -414,7 +414,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti.vendor
 
 # RenderScript
 PRODUCT_PACKAGES += \
