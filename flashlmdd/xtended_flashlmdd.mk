@@ -51,5 +51,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="flashlmdd_lao_com" \
     PRIVATE_BUILD_DESC="flashlmdd_lao_com-user 10 QKQ1.191021.002 210771107e0c8 release-keys"
 
-BUILD_FINGERPRINT := "lge/flashlmdd_lao_com/flashlmdd:10/QKQ1.191021.002/210771107e0c8:user/release-keys"
-
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.210605.005/7349499:user/release-keys
