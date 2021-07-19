@@ -217,6 +217,8 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
 
+    start zramswapon
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -807,3 +809,9 @@ service vendor.contexthub-hal-1-0 /vendor/bin/hw/android.hardware.contexthub@1.0
     user system
     group system
     disabled
+
+service zramswapon /vendor/bin/init.lge.zramswap.sh start
+	user root
+	group system
+	disabled
+	oneshot
