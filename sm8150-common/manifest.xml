@@ -1,4 +1,4 @@
-<manifest version="1.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -223,11 +223,7 @@
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
-        <fqname>@1.2::ISap/slot2</fqname>
         <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
-        <fqname>@1.4::ISap/slot1</fqname>
-        <fqname>@1.4::ISap/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -252,12 +248,12 @@
     <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>ISecureElement</name>
             <instance>SIM1</instance>
         </interface>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
+        <fqname>@1.2::ISecureElement/SIM1</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
@@ -336,16 +332,17 @@
              <name>IImsCmService</name>
              <instance>qti.ims.connectionmanagerservice</instance>
          </interface>
+        <fqname>@2.2::IImsCmService/qti.ims.connectionmanagerservice</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>IUceService</name>
             <instance>com.qualcomm.qti.uceservice</instance>
         </interface>
-        <fqname>@2.1::IUceService/com.qualcomm.qti.uceservice</fqname>
+        <fqname>@2.2::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.display.color</name>
@@ -378,20 +375,41 @@
         <fqname>@1.0::IDisplayPostproc/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.lge.hardware.dualscreen</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IDualScreen</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::IDualScreen/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.lgdata</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>ILgData</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ILgDataVendorRil</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::ILgData/default</fqname>
+        <fqname>@1.1::ILgDataVendorRil/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.lge.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>1.3</version>
+        <version>2.0</version>
         <interface>
             <name>ILgeRadio</name>
             <instance>lge_radio</instance>
-            <instance>lge_radio2</instance>
             <instance>radio1_wifi</instance>
-            <instance>radio2_wifi</instance>
         </interface>
-        <fqname>@1.3::ILgeRadio/lge_radio</fqname>
-        <fqname>@1.3::ILgeRadio/lge_radio2</fqname>
-        <fqname>@1.3::ILgeRadio/radio1_wifi</fqname>
-        <fqname>@1.3::ILgeRadio/radio2_wifi</fqname>
+        <fqname>@2.0::ILgeRadio/lge_radio</fqname>
+        <fqname>@2.0::ILgeRadio/radio1_wifi</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lge.hardware.vss_ims</name>
@@ -582,6 +600,16 @@
         <fqname>@1.0::IQtiAllocator/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IEmbms</name>
+            <instance>embmsslServer0</instance>
+        </interface>
+        <fqname>@1.1::IEmbms/embmsslServer0</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.display.mapper</name>
         <transport arch="32+64">passthrough</transport>
         <version>2.0</version>
@@ -680,24 +708,12 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <version>1.5</version>
+        <version>1.6</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
-            <instance>imsradio1</instance>
         </interface>
-        <fqname>@1.5::IImsRadio/imsradio0</fqname>
-        <fqname>@1.5::IImsRadio/imsradio1</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDeviceInfo</name>
-            <instance>deviceinfo</instance>
-        </interface>
-        <fqname>@1.0::IDeviceInfo/deviceinfo</fqname>
+        <fqname>@1.6::IImsRadio/imsradio0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
@@ -706,10 +722,8 @@
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
-            <instance>UimLpa1</instance>
         </interface>
         <fqname>@1.0::IUimLpa/UimLpa0</fqname>
-        <fqname>@1.0::IUimLpa/UimLpa1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -718,22 +732,8 @@
         <interface>
             <name>IQtiOemHook</name>
             <instance>oemhook0</instance>
-            <instance>oemhook1</instance>
         </interface>
         <fqname>@1.0::IQtiOemHook/oemhook0</fqname>
-        <fqname>@1.0::IQtiOemHook/oemhook1</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.qtiradio</name>
-        <transport>hwbinder</transport>
-        <version>2.3</version>
-        <interface>
-            <name>IQtiRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-        <fqname>@2.3::IQtiRadio/slot1</fqname>
-        <fqname>@2.3::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -742,10 +742,18 @@
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
-            <instance>slot2</instance>
         </interface>
         <fqname>@1.0::IQtiRadio/slot1</fqname>
-        <fqname>@1.0::IQtiRadio/slot2</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <transport>hwbinder</transport>
+        <version>2.4</version>
+        <interface>
+            <name>IQtiRadio</name>
+            <instance>slot1</instance>
+        </interface>
+        <fqname>@2.4::IQtiRadio/slot1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
@@ -754,10 +762,8 @@
         <interface>
             <name>IUim</name>
             <instance>Uim0</instance>
-            <instance>Uim1</instance>
         </interface>
         <fqname>@1.2::IUim/Uim0</fqname>
-        <fqname>@1.2::IUim/Uim1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
@@ -766,10 +772,8 @@
         <interface>
             <name>IUimRemoteServiceClient</name>
             <instance>uimRemoteClient0</instance>
-            <instance>uimRemoteClient1</instance>
         </interface>
         <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient0</fqname>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
@@ -778,10 +782,8 @@
         <interface>
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
-            <instance>uimRemoteServer1</instance>
         </interface>
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
-        <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.scve.objecttracker</name>
@@ -890,14 +892,24 @@
         <fqname>@1.0::IService/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.ims.factory</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IImsFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IImsFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>3.0</version>
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
         </interface>
-        <fqname>@2.1::IRTPService/imsrtpservice</fqname>
+        <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.power.pasrmanager</name>
