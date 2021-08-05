@@ -14,8 +14,9 @@
 // limitations under the License.
 cc_binary {
     name: "android.hardware.vibrator@1.2-service.lge",
-    relative_install_path: "hw",
+    vintf_fragments: ["android.hardware.vibrator@1.2-service.lge.xml"],
     init_rc: ["android.hardware.vibrator@1.2-service.lge.rc"],
+    relative_install_path: "hw",
     srcs: ["service.cpp", "Vibrator.cpp"],
     cflags: [
         "-Wall",
