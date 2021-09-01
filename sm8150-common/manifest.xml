@@ -293,21 +293,6 @@
         <fqname>@1.1::IDualScreen/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.lge.hardware.lgdata</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>ILgData</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ILgDataVendorRil</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::ILgData/default</fqname>
-        <fqname>@1.1::ILgDataVendorRil/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.lge.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
