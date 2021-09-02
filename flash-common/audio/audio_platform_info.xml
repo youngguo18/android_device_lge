@@ -96,11 +96,11 @@
         <usecase name="USECASE_AUDIO_PLAYBACK_MMAP" type="out" id="33" />
         <usecase name="USECASE_AUDIO_RECORD_MMAP" type="in" id="33" />
         <usecase name="USECASE_AUDIO_A2DP_ABR_FEEDBACK" type="in" id="40" />
-        <usecase name="USECASE_INCALL_MUSIC_UPLINK" type="out" id="27" />
+        <usecase name="USECASE_INCALL_MUSIC_UPLINK" type="out" id="1" />
         <usecase name="USECASE_AUDIO_RECORD_COMPRESS2" type="in" id="41" />
-	<usecase name="USECASE_AUDIO_3RDP_SPKR_PROT_TX" type="in" id="97"/>
-        <usecase name="USECASE_AUDIO_PLAYBACK_DUAL_AUDIO" type="in" id="98"/>
-        <usecase name="USECASE_AUDIO_PLAYBACK_DUAL_AUDIO" type="out" id="98"/>
+	<usecase name="USECASE_AUDIO_3RDP_SPKR_PROT_TX" type="in" id="100"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_DUAL_AUDIO" type="in" id="101"/>
+        <usecase name="USECASE_AUDIO_PLAYBACK_DUAL_AUDIO" type="out" id="101"/>
     </pcm_ids>
     <config_params>
         <param key="spkr_1_tz_name" value="wsatz.13"/>
