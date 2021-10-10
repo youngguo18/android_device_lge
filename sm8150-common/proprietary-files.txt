@@ -1,3 +1,5 @@
+# All unpinned blobs below are extracted from LM-V500EM 30a
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/dspservice
