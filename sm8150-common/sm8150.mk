@@ -440,7 +440,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     libprotobuf-cpp-full \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libjson
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \
