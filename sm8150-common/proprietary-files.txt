@@ -153,6 +153,12 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 system_ext/lib64/libaptX_encoder.so
 system_ext/lib64/libaptXHD_encoder.so
 
+# Bluetooth (dsi)
+system/lib/com.dsi.ant@1.0.so
+system/lib64/com.dsi.ant@1.0.so
+vendor/lib/com.dsi.ant@1.0.so
+vendor/lib64/com.dsi.ant@1.0.so
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
