@@ -138,6 +138,7 @@ persist.vendor.lge.gnss.lppe_support=11
 persist.vendor.lge.gnss.week_number=1738
 
 # Graphics
+debug.sdm.support_writeback=0
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.hw=0
