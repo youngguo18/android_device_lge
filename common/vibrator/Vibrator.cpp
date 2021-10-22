@@ -36,7 +36,7 @@
 namespace android {
 namespace hardware {
 namespace vibrator {
-namespace V1_2 {
+namespace V1_3 {
 namespace implementation {
 
 // How many buffer entries needed per ms
@@ -137,7 +137,7 @@ Return<Status> Vibrator::on(uint32_t timeoutMs, uint8_t amplitude) {
 }
 
 
-// Methods from ::android::hardware::vibrator::V1_2::IVibrator follow.
+// Methods from ::android::hardware::vibrator::V1_3::IVibrator follow.
 Return<Status> Vibrator::on(uint32_t timeoutMs) {
     return on(timeoutMs, DEFAULT_AMPLITUDE);
 }
@@ -173,6 +173,15 @@ Return<Status> Vibrator::setAmplitude(uint8_t amplitude) {
     return Status::OK;
 }
 
+Return<bool> Vibrator::supportsExternalControl()  {
+    //return (mRtpInput ? true : false);
+    return false;
+}
+
+Return<Status> Vibrator::setExternalControl(bool /*enabled*/) {
+    return Status::OK;
+}
+
 static uint8_t convertEffectStrength(EffectStrength strength) {
     uint8_t amplitude;
 
@@ -198,7 +207,11 @@ Return<void> Vibrator::perform_1_1(V1_1::Effect_1_1 effect, EffectStrength stren
     return performEffect(static_cast<Effect>(effect), strength, _hidl_cb);
 }
 
-Return<void> Vibrator::perform_1_2(Effect effect, EffectStrength strength, perform_cb _hidl_cb) {
+Return<void> Vibrator::perform_1_2(V1_2::Effect effect, EffectStrength strength, perform_cb _hidl_cb) {
+    return performEffect(static_cast<Effect>(effect), strength, _hidl_cb);
+}
+
+Return<void> Vibrator::perform_1_3(Effect effect, EffectStrength strength, perform_cb _hidl_cb) {
     return performEffect(static_cast<Effect>(effect), strength, _hidl_cb);
 }
 
@@ -231,7 +244,7 @@ Return<void> Vibrator::performEffect(Effect effect, EffectStrength strength, per
 
 
 } // namespace implementation
-}  // namespace V1_2
+}  // namespace V1_3
 }  // namespace vibrator
 }  // namespace hardware
 }  // namespace android

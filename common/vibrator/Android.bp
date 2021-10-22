@@ -13,9 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 cc_binary {
-    name: "android.hardware.vibrator@1.2-service.lge",
-    vintf_fragments: ["android.hardware.vibrator@1.2-service.lge.xml"],
-    init_rc: ["android.hardware.vibrator@1.2-service.lge.rc"],
+    name: "android.hardware.vibrator@1.3-service.lge",
+    vintf_fragments: ["android.hardware.vibrator@1.3-service.lge.xml"],
+    init_rc: ["android.hardware.vibrator@1.3-service.lge.rc"],
     relative_install_path: "hw",
     srcs: ["service.cpp", "Vibrator.cpp"],
     cflags: [
@@ -32,6 +32,7 @@ cc_binary {
         "android.hardware.vibrator@1.0",
         "android.hardware.vibrator@1.1",
         "android.hardware.vibrator@1.2",
+        "android.hardware.vibrator@1.3",
     ],
     proprietary: true,
 }

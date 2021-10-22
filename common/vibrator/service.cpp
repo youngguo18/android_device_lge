@@ -26,8 +26,8 @@
 
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
-using android::hardware::vibrator::V1_2::IVibrator;
-using android::hardware::vibrator::V1_2::implementation::Vibrator;
+using android::hardware::vibrator::V1_3::IVibrator;
+using android::hardware::vibrator::V1_3::implementation::Vibrator;
 using namespace android;
 
 status_t registerVibratorService() {
