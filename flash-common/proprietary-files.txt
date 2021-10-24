@@ -164,6 +164,9 @@ vendor/lib64/libgf_hal.so
 vendor/usr/idc/goodix_fp_key.idc
 vendor/usr/keylayout/goodix_fp_key.kl
 
+# GNSS
+vendor/etc/gnss_antenna_info.conf
+
 # IPA Firmware
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
