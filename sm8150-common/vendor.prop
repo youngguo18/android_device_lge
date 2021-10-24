@@ -102,16 +102,6 @@ ro.charger.enable_suspend=true
 ro.crypto.set_dun=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# Dalvik
-pm.dexopt.boot=verify
-pm.dexopt.first-boot=verify
-pm.dexopt.install=speed-profile
-dalvik.vm.image-dex2oat-filter=speed
-dalvik.vm.image-dex2oat-threads=8
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.dex2oat-threads=8
-dalvik.vm.dex2oat64.enabled=true
-
 # Display
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
@@ -128,15 +118,10 @@ vendor.display.enable_optimize_refresh=1
 
 # DPM
 persist.vendor.dpm.feature=0
-
-# DPM
 persist.vendor.dpmhalservice.enable=1
 
 # DRM
 drm.service.enabled=true
-
-# fastbootd
-ro.fastbootd.available=true
 
 # Fingerprint
 persist.vendor.qfp=true
@@ -155,35 +140,17 @@ persist.vendor.lge.gnss.week_number=1738
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
-debug.sf.disable_backpressure=1
-debug.sf.early.sf.duration=16000000
-debug.sf.early.app.duration=16500000
-debug.sf.earlyGl.sf.duration=13500000
-debug.sf.earlyGl.app.duration=21000000
 debug.sf.hw=0
-debug.sf.latch_unsignaled=1
-debug.sf.late.sf.duration=10500000
-debug.sf.late.app.duration=20500000
-debug.sf.use_phase_offsets_as_durations=1
 persist.demo.hdmirotationlock=false
-persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.vulkan=adreno
 ro.hardware.egl=adreno
-ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 
-# Incremental FS
-ro.incremental.enable=1
-
 # Keystore
 ro.hardware.keystore_desede=true
-
-# Media
-debug.stagefright.ccodec=1
-debug.stagefright.omx_default_rank=0
 
 # PASR
 vendor.pasr.activemode.enabled=true
@@ -205,6 +172,7 @@ persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_network=33,33
+ro.telephony.iwlan_operation_mode=AP-assisted
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=false
@@ -218,8 +186,3 @@ vendor.voice.path.for.pcm.voip=false
 # Volume
 ro.config.vc_call_vol_steps=7
 
-# Target specific Netflix custom property
-ro.netflix.bsp_rev=Q855-16947-1
-
-# WLAN
-wifi.aware.interface=wifi-aware0
