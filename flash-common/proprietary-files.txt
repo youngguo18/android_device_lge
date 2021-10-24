@@ -158,6 +158,7 @@ vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Fingerprint
 vendor/lib64/hw/fingerprint.msmnile.so
+vendor/lib64/libfpsph.so
 vendor/lib64/libgf_algo.so
 vendor/lib64/libgf_hal.so
 vendor/usr/idc/goodix_fp_key.idc
