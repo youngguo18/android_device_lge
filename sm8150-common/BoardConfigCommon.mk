@@ -118,6 +118,9 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 ODM_MANIFEST_FILES += $(COMMON_PATH)/manifest-qva.xml
 
+# Graphics
+TARGET_USES_VULKAN := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_lge_msmnile
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_msmnile
