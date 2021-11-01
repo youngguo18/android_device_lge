@@ -3,6 +3,8 @@
 This XML file declares which platform apps that need to access internal APIs.
 -->
 <config>
+  <hidden-api-whitelisted-app package="com.android.bluetooth" />
+  <hidden-api-whitelisted-app package="org.codeaurora.bluetooth" />
   <hidden-api-whitelisted-app package="com.android.hotwordenrollment.okgoogle" />
   <hidden-api-whitelisted-app package="com.android.hotwordenrollment.xgoogle" />
 </config>
