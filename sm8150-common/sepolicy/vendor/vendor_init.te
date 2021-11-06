@@ -10,6 +10,3 @@ set_prop(vendor_init, vendor_qni_prop)
 set_prop(vendor_init, vendor_sensors_prop)
 
 allow vendor_init persdata_block_device:dir relabelto;
-
-allow vendor_init sec_block_device:blk_file r_file_perms;
-allow vendor_init exported2_default_prop:property_service { set };
