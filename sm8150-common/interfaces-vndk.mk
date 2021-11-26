@@ -10,7 +10,7 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-	android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.gatekeeper@1.0.vendor \
     android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@4.0 \
@@ -46,13 +46,13 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor \
     android.hardware.power@1.3 \
-    android.hardware.power@1.3.vendor \
+    android.hardware.power@1.3.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
-	android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio.deprecated@1.0.vendor
 
 # Secure Element
 PRODUCT_PACKAGES += \
@@ -67,5 +67,3 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
 	android.hardware.wifi@1.5.vendor
-	
-	
