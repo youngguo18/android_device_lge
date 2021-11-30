@@ -1,0 +1,7 @@
+type clean_scratch_files, domain;
+type clean_scratch_files_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(clean_scratch_files)
+
+allow clean_scratch_files gsi_metadata_file:dir search;
+allow clean_scratch_files metadata_file:dir search;

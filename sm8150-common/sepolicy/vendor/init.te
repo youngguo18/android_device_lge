@@ -10,4 +10,19 @@ allow init { persdata_block_device
 allow init firmware_file:filesystem getattr;
 
 allow init encrypt_block_device:blk_file write;
-allow init sysfs:file { write open};
+
+allow init vendor_hal_perf_hwservice:hwservice_manager find;
+
+allow init persistlg_file:dir mounton;
+
+# Allow vendor_init to set vendor_nfc_prop
+set_prop(vendor_init, vendor_nfc_prop)
+
+allow init hal_lge_powerhint_hwservice:hwservice_manager { add find };
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init same_process_hal_file:file execute;
+allow init self:qipcrtr_socket create;
+allow init vendor_sysfs_kgsl:file { open read };
+allow init vendor_sysfs_kgsl:lnk_file read;
+

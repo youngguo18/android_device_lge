@@ -12,8 +12,5 @@ allow hal_dac_control_default hal_audio_hwservice:hwservice_manager find;
 allow hal_dac_control_default sysfs_dac:dir r_dir_perms;
 allow hal_dac_control_default sysfs_dac:file { rw_file_perms open getattr };
 allow hal_dac_control_default sysfs_dac:lnk_file read;
-allow hal_dac_control_default property_socket:sock_file { write };
-allow hal_dac_control_default init:unix_stream_socket { connectto };
-allow hal_dac_control_default vendor_audio_prop:property_service { set };
 
-
+set_prop(hal_dac_control_default, vendor_audio_prop)

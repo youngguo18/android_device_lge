@@ -1,3 +1,6 @@
+# AOSP clean_scratch_files tool executable
+/system/bin/clean_scratch_files						u:object_r:clean_scratch_files_exec:s0
+
 # Block devices
 /dev/block/platform/soc/1d84000\.ufshc/by-name/encrypt                   u:object_r:encrypt_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/persdata                  u:object_r:persdata_block_device:s0
@@ -19,6 +22,7 @@
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.lge_msmnile                       u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.2-service-qti                       u:object_r:vendor_hal_neuralnetworks_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service-pn55x                                u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.lge_msmnile     u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lge\.hardware\.vss_ims@1\.0-service                              u:object_r:hal_vss_ims_default_exec:s0
@@ -28,8 +32,16 @@
 /(vendor|system/vendor)/bin/qrtr-lookup                                                                 u:object_r:vendor_qrtr_exec:s0
 /(vendor|system/vendor)/bin/wigig_wiburn                                                                u:object_r:wigig_wiburn_exec:s0
 
+#poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service								u:object_r:vendor_poweroptservice_exec:s0										
+
+# Label
+/bt_firmware(/.*)?					u:object_r:bt_firmware_file:s0
+/dsp(/.*)?						u:object_r:adsprpcd_file:s0
+/firmware(/.*)?						u:object_r:firmware_file:s0
+
 # LG
-/mnt/vendor/absolute(/.*)?                              u:object_r:persdata_file:s0
+/mnt/vendor/absolute(/.*)?										u:object_r:persdata_file:s0
 
 # OP files
 /product/OP(/.*)?                                       u:object_r:op_file:s0

@@ -18,4 +18,4 @@ BOARD_VENDOR := lge
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/lge/common/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/lge/common/sepolicy/public
-BOARD_SEPOLICY_DIRS += device/lge/common/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += device/lge/common/sepolicy/vendor

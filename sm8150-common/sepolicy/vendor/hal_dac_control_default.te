@@ -1,1 +1,0 @@
-allow hal_dac_control_default vendor_audio_prop:file { read open map getattr };

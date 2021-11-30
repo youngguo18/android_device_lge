@@ -1,2 +1,4 @@
 type hal_vss_ims_hwservice, hwservice_manager_type;
+type hal_nxpnfc_hwservice, hwservice_manager_type;
+type hal_lge_powerhint_hwservice, hwservice_manager_type;
 
