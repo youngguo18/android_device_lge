@@ -2,6 +2,8 @@
 # system props for lge sm8150-common
 #
 
+ro.apk_verity.mode=2
+
 # Audio
 audio.deep_buffer.media=true
 tunnel.audio.encode=true
