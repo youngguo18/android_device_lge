@@ -1,0 +1,76 @@
+<compatibility-matrix version="1.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpnfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.audio.dac.control</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDacAdvancedControl</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDacHalControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IDacAdvancedControl/default</fqname>
+        <fqname>@1.0::IDacHalControl/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.lgdata</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>ILgData</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ILgDataVendorRil</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::ILgData/default</fqname>
+        <fqname>@1.1::ILgDataVendorRil/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.powerhint.rescontrol</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IResControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IResControl/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ILgeRadio</name>
+            <instance>lge_radio</instance>
+            <instance>lge_radio2</instance>
+            <instance>radio1_wifi</instance>
+            <instance>radio2_wifi</instance>
+        </interface>
+        <fqname>@2.0::ILgeRadio/lge_radio</fqname>
+        <fqname>@2.0::ILgeRadio/lge_radio2</fqname>
+        <fqname>@2.0::ILgeRadio/radio1_wifi</fqname>
+        <fqname>@2.0::ILgeRadio/radio2_wifi</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.vss_ims</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IVssIms</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IVssIms/default</fqname>
+    </hal>
+</compatibility-matrix>

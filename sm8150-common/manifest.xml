@@ -1,4 +1,4 @@
-<manifest version="2.0" type="device" target-level="4">
+<manifest version="1.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -98,7 +98,6 @@
             <instance>software</instance>
         </interface>
         <fqname>@1.0::IComponentStore/default</fqname>
-        <fqname>@1.0::IComponentStore/software</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -133,7 +132,6 @@
             <name>INfc</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.2::INfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
@@ -142,8 +140,6 @@
         <fqname>@1.2::ISap/slot2</fqname>
         <fqname>@1.5::IRadio/slot1</fqname>
         <fqname>@1.5::IRadio/slot2</fqname>
-        <fqname>@1.5::ISap/slot1</fqname>
-        <fqname>@1.5::ISap/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -206,16 +202,6 @@
         <fqname>@1.0::IOffloadControl/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>com.qualcomm.qti.dpm.api</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IdpmQmi</name>
-            <instance>dpmQmiService</instance>
-        </interface>
-        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
-    </hal>
-    <hal format="hidl">
          <name>com.qualcomm.qti.imscmservice</name>
          <transport>hwbinder</transport>
          <version>2.2</version>
@@ -223,7 +209,6 @@
              <name>IImsCmService</name>
              <instance>qti.ims.connectionmanagerservice</instance>
          </interface>
-        <fqname>@2.2::IImsCmService/qti.ims.connectionmanagerservice</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.uceservice</name>
@@ -307,34 +292,14 @@
         <fqname>@1.0::IVssIms/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.nxp.nxpese</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpEse</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::INxpEse/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.nxp.nxpnfc</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>1.0</version>
         <interface>
             <name>INxpNfc</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::INxpNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfclegacy</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfcLegacy</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::INxpNfcLegacy/default</fqname>
+        <fqname>@1.0::INxpNfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
@@ -367,16 +332,6 @@
         <fqname>@1.0::IAlarm/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.bluetooth_audio</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_sar</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -384,17 +339,16 @@
             <name>IBluetoothSar</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IBluetoothSar/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.btconfigstore</name>
+        <name>vendor.qti.hardware.cacert</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>1.0</version>
         <interface>
-            <name>IBTConfigStore</name>
+            <name>IService</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::IBTConfigStore/default</fqname>
+        <fqname>@1.0::IService/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.capabilityconfigstore</name>
@@ -441,16 +395,6 @@
         <fqname>@1.0::IIWlan/slot2</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.data.latency</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ILinkLatency</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ILinkLatency/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.dsp</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -469,6 +413,15 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IFactory/default</fqname>
+    </hal>
+	<hal format="hidl">
+      <name>vendor.qti.hardware.fm</name>
+      <transport>hwbinder</transport>
+      <version>1.0</version>
+      <interface>
+          <name>IFmHci</name>
+          <instance>default</instance>
+      </interface>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.iop</name>
@@ -566,18 +519,6 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IQtiRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-        <fqname>@1.0::IQtiRadio/slot1</fqname>
-        <fqname>@1.0::IQtiRadio/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.qtiradio</name>
-        <transport>hwbinder</transport>
         <version>2.4</version>
         <interface>
             <name>IQtiRadio</name>
@@ -586,6 +527,18 @@
         </interface>
         <fqname>@2.4::IQtiRadio/slot1</fqname>
         <fqname>@2.4::IQtiRadio/slot2</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQtiRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+        <fqname>@1.0::IQtiRadio/slot1</fqname>
+        <fqname>@1.0::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
@@ -732,5 +685,14 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IPasrManager/default</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.qspmhal</name>
+	<transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQspmhal</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </manifest>

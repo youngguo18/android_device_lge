@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/xtended_flashlmdd.mk
+    $(LOCAL_DIR)/aospa_flashlmdd.mk
 
 COMMON_LUNCH_CHOICES := \
-    xtended_flashlmdd-userdebug \
-    xtended_flashlmdd-eng
+    aospa_flashlmdd-userdebug \
+    aospa_flashlmdd-eng

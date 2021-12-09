@@ -33,10 +33,11 @@
 
         <activity
             android:name=".QuadDACPanelActivity"
-            android:label="@string/quad_dac">
+            android:label="@string/quad_dac"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-		<action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+		        <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.icon"
@@ -53,7 +54,8 @@
             android:name=".QuadDACTileService"
             android:icon="@drawable/ic_quad_dac_icon"
             android:label="@string/quad_dac"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>

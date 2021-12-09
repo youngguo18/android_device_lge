@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,35 +11,31 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
+
+ifeq (aospa_flashlmdd,$(TARGET_PRODUCT))
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit from flashlmdd device
+# Inherit from the custom device configuration.
 $(call inherit-product, device/lge/flashlmdd/device.mk)
 
-# Inherit some common Xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+# Inherit from the AOSPA configuration.
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 # Device identifiers
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_DISABLES_GAPPS :=true
 
-PRODUCT_NAME := xtended_flashlmdd
+PRODUCT_NAME := aospa_flashlmdd
 PRODUCT_DEVICE := flashlmdd
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RELEASE_NAME := V50 ThinQ
 PRODUCT_MODEL := LM-V500
-
-# Maintainer
-XTENDED_BUILD_MAINTAINER = youngguo
-XTENDED_BUILD_DONATE_URL = https://www.paypal.me/youngg168
-XTENDED_BUILD_SUPPORT_URL = https://t.me/youngguo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lge
 
@@ -53,3 +48,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := "lge/flashlmdd_lao_com/flashlmdd:11/RKQ1.210420.001/2122112261c44:user/release-keys"
 
+endif

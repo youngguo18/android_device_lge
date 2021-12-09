@@ -19,3 +19,5 @@ set_prop(qni, vendor_qni_prop)
 
 allow qni self:capability { fsetid setuid net_admin };
 allow qni self:capability2 { block_suspend };
+
+allow qni mnt_vendor_file:dir search;

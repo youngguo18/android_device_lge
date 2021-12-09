@@ -1,0 +1,6 @@
+# Allow vendor_sensors to get vendor_sensors_prop
+allow vendor_sensors sns_file:dir rw_dir_perms;
+allow vendor_sensors sns_file:file { getattr open read };
+get_prop(vendor_sensors, vendor_sensors_prop)
+
+allow vendor_sensors sns_file:dir write;
