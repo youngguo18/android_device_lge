@@ -4,3 +4,6 @@
 
 # Voice assistant
 ro.opa.eligible_device=true
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
