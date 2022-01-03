@@ -54,6 +54,9 @@ ro.nfc.port=I2C
 # Perf
 ro.vendor.qti.sys.fw.bg_apps_limit=64
 
+# Processor Model
+ro.processor.model=SM8150
+
 # Priv-app permissions whitelist
 ro.control_privapp_permissions=log
 
