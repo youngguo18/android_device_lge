@@ -85,6 +85,7 @@ persist.vendor.qcom.bluetooth.scram.enabled=true
 ro.vendor.bluetooth.wipower=false
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 persist.vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.service.bdroid.sibs=false
 
 # Camera
 ro.vendor.lge.dev.fmode=0
