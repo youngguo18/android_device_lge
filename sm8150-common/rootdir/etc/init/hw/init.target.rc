@@ -186,7 +186,7 @@ service vendor.lowi /vendor/bin/sscrpcd
    class core
    user system
    group system wakelock
-   capabilities BLOCK_SUSPEND
+   disabled
 
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
