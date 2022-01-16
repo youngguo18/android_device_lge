@@ -1,1 +1,2 @@
 allow system_server tmpfs:file { getattr map open read };
+allow system_server init:binder { call };

@@ -3,3 +3,6 @@ allow system_app sysfs_zram:dir r_file_perms;
 allow system_app tmpfs:file read;
 # allow system_app to interact with pasr hal
 #hal_client_domain(system_app, hal_pasrmanager)
+
+allow system_app sysfs_zram:dir { search };
+allow system_app sysfs_zram:file { read open getattr };

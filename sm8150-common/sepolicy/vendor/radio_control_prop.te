@@ -1,0 +1,2 @@
+allow radio_control_prop vendor_netmgrd:file { read open getattr map };
+
