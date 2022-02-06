@@ -17,9 +17,6 @@
 # Inherit proprietary blobs
 $(call inherit-product, vendor/lge/sm8150-common/sm8150-common-vendor.mk)
 
-# Project ID Quota
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 COMMON_PATH := device/lge/sm8150-common
 
 # Board
