@@ -17,25 +17,20 @@
 android_app {
     name: "QuadDACPanel",
 
-    srcs: [
-        "src/org/lineageos/hardware/util/FileUtils.java",
-        "src/org/lineageos/settings/device/dac/*.java",
-        "src/org/lineageos/settings/device/dac/*/*.java",
-    ],
-
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
     certificate: "platform",
     privileged: true,
     platform_apis: true,
+    system_ext_specific: true,
 
     static_libs: [
-        "androidx.core_core",
-        "androidx.preference_preference",
-        "androidx.appcompat_appcompat-resources",
         "vendor.lge.hardware.audio.dac.control-V1.0-java",
+        "org.lineageos.settings.resources",
     ],
 
-    resource_dirs: [
-        "res",
-    ],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 }
 

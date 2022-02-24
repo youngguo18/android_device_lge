@@ -15,21 +15,10 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/quad_dac_app_name"
-        android:theme="@style/Theme.Main"
+        android:theme="@style/Theme.SubSettingsBase"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
-        <provider
-            android:name=".QuadDACPanelSearchIndexablesProvider"
-            android:authorities="org.lineageos.settings.device.dac"
-            android:multiprocess="false"
-            android:grantUriPermissions="true"
-            android:permission="android.permission.READ_SEARCH_INDEXABLES"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
-            </intent-filter>
-        </provider>
 
         <activity
             android:name=".QuadDACPanelActivity"
@@ -62,6 +51,16 @@
             </intent-filter>
         </service>
 
+        <provider
+            android:name=".QuadDACPanelSearchIndexablesProvider"
+            android:authorities="org.lineageos.settings.device.dac"
+            android:multiprocess="false"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+            </intent-filter>
+        </provider>
     </application>
-
 </manifest>
