@@ -3,5 +3,3 @@ type vendor_lge_usb_prop, property_type;
 type vendor_qni_prop, property_type;
 type vendor_nfc_prop, property_type;
 type vendor_thermald_prop, property_type;
-
-

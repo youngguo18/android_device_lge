@@ -12,6 +12,8 @@ genfscon sysfs /class/lg_rgb_led/use_patterns/onoff_patterns                    
 genfscon sysfs /class/lg_rgb_led/use_patterns/blink_patterns                    u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/virtual/lg_rgb_led/use_patterns/onoff_patterns          u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/virtual/lg_rgb_led/use_patterns/blink_patterns          u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/virtual/panel/brightness/irc_brighter                   u:object_r:sysfs_graphics:s0
+genfscon sysfs /module/msm_drm/parameters/dc_enabled                            u:object_r:sysfs_graphics:s0
 
 # Sensors
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys2/state    u:object_r:vendor_sysfs_sensors:s0
