@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+    
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
