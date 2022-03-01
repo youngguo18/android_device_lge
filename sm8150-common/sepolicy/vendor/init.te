@@ -18,7 +18,6 @@ allow init persistlg_file:dir mounton;
 # Allow vendor_init to set vendor_nfc_prop
 set_prop(vendor_init, vendor_nfc_prop)
 
-allow init hal_lge_powerhint_hwservice:hwservice_manager { add find };
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init hwservicemanager:binder { call transfer };
 allow init same_process_hal_file:file execute;

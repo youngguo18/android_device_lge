@@ -5,5 +5,4 @@ vendor.nxp.eventprocessor::INxpEseEvtProcessor                        u:object_r
 vendor.nxp.nxpese::INxpEse                                            u:object_r:hal_secure_element_hwservice:s0
 vendor.nxp.nxpnfc::INxpNfc                                            u:object_r:hal_nxpnfc_hwservice:s0
 vendor.nxp.nxpnfclegacy::INxpNfcLegacy					u:object_r:hal_nxpnfc_hwservice:s0
-vendor.lge.hardware.powerhint.rescontrol::IResControl			u:object_r:hal_lge_powerhint_hwservice:s0
 
