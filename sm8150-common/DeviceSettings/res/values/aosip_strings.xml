@@ -21,7 +21,7 @@
     <string name="display_title">Display</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">High brightness mode</string>
-    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_summary">Experimental feature! Enable Disable Hardware Overlays in Developer options if you face blocks with different brightness issue. It may increase battery usage.</string>
     <string name="dc_mode_title">Anti-flicker mode</string>
     <string name="tile_hbm_mode">Outdoor mode</string>
     <string name="tile_dc_mode">Anti-flicker</string>

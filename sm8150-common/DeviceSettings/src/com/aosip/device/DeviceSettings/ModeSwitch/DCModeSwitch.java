@@ -24,8 +24,7 @@ import com.aosip.device.DeviceSettings.Utils;
 
 public class DCModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String DC_DIMMING_FILE = "/sys/module/msm_drm/parameters/dc_enabled";
-    private static final String BRIGHTNESS_FILE = "/sys/class/backlight/panel0-backlight/brightness";
+    private static final String DC_DIMMING_FILE = "/sys/devices/virtual/panel/brightness/dc_dimming";
 
     public static String getFile() {
         if (Utils.fileWritable(DC_DIMMING_FILE)) {
@@ -43,9 +42,7 @@ public class DCModeSwitch implements OnPreferenceChangeListener {
     }
 
     public static void setValue(String value) {
-        String brightness = Utils.getFileValue(BRIGHTNESS_FILE, "50");
         Utils.writeValue(getFile(), value);
-        Utils.writeValue(BRIGHTNESS_FILE, brightness);
     }
 
     @Override

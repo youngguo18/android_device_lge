@@ -2,5 +2,5 @@ on init
     # LiveDisplay sysfs
     chown system system /sys/devices/virtual/panel/brightness/irc_brighter
     chmod 0660 /sys/devices/virtual/panel/brightness/irc_brighter
-	chown system system /sys/module/msm_drm/parameters/dc_enabled
-    chmod 0660 /sys/module/msm_drm/parameters/dc_enabled
+	chown system system /sys/devices/virtual/panel/brightness/dc_dimming
+    chmod 0660 /sys/devices/virtual/panel/brightness/dc_dimming
