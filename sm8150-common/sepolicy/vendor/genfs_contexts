@@ -18,6 +18,17 @@ genfscon sysfs /devices/virtual/panel/brightness/dc_dimming                   u:
 # Sensors
 genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys2/state    u:object_r:vendor_sysfs_sensors:s0
 
+# Sysfs
+genfscon sysfs /devices/0305_01.01.00/wakeup                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/vendor/vendor:lge-veneer-psy/wakeup            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/171c0000.slim/tavil-slim-pgd/wakeup        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint@0/wakeup                   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/wakeup                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ae90000.qcom,dp_display/wakeup             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c80000.i2c/i2c-4/4-0020/wakeup             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup                 u:object_r:sysfs_wakeup:s0
+
 # Tap2wake
 genfscon sysfs /devices/virtual/input/lge_touch                        u:object_r:sysfs_lge_touch:s0
 
