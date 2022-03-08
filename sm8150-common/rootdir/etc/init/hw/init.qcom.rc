@@ -416,6 +416,9 @@ on property:vold.decrypt=trigger_load_persist_props
     #LGE - Start time daemon early so that the system time can be set early
     start time_daemon
 
+    # NFC
+    chown nfc nfc /dev/pn55x
+
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
