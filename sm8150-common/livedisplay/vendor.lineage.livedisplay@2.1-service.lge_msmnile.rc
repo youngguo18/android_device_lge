@@ -1,0 +1,19 @@
+on init
+    # LiveDisplay sysfs
+    chown system system /sys/devices/virtual/panel/img_tune/screen_mode
+    chmod 0666 /sys/devices/virtual/panel/img_tune/screen_mode
+    chown system system /sys/devices/virtual/panel/img_tune/screen_tune
+    chmod 0666 /sys/devices/virtual/panel/img_tune/screen_tune
+    chown system system /sys/devices/virtual/panel/img_tune/rgb_tune
+    chmod 0666 /sys/devices/virtual/panel/img_tune/rgb_tune
+    chown system system /sys/devices/virtual/panel/img_tune/hdr_mode
+    chmod 0666 /sys/devices/virtual/panel/img_tune/hdr_mode
+    chown system system /sys/devices/virtual/panel/brightness/irc_brighter
+    chmod 0666 /sys/devices/virtual/panel/brightness/irc_brighter
+	chown system system /sys/devices/virtual/panel/brightness/dc_dimming
+    chmod 0666 /sys/devices/virtual/panel/brightness/dc_dimming
+
+service vendor.livedisplay-hal-2-1-lge_msmnile /vendor/bin/hw/vendor.lineage.livedisplay@2.1-service.lge_msmnile
+    class hal
+    user system
+    group system
