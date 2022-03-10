@@ -172,10 +172,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
-
-# Device Settings
-PRODUCT_PACKAGES += \
-    DeviceSettings
     
 # Display
 PRODUCT_PACKAGES += \
