@@ -3,3 +3,4 @@ type hal_lgdata_hwservice, hwservice_manager_type;
 type hal_nxpnfc_hwservice, hwservice_manager_type;
 type hal_nxpese_hwservice, hwservice_manager_type;
 type hal_powerhint_hwservice, hwservice_manager_type;
+type hal_turbo_adapter_hwservice, hwservice_manager_type;

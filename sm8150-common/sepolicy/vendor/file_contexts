@@ -12,6 +12,9 @@
 /dev/goodix_fp            u:object_r:fingerprintd_device:s0
 /dev/pn547                u:object_r:nfc_device:s0
 
+# FPS Info
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps                       u:object_r:sysfs_fps:s0
+
 # Init
 /(vendor|system/vendor)/bin/init\.lge\.usb\.default\.sh                                                 u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.lge\.usb\.lao\.sh                                                     u:object_r:vendor_qti_init_shell_exec:s0

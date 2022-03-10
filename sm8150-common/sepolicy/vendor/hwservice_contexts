@@ -1,3 +1,4 @@
+vendor.google.google_battery::IGoogleBattery                            u:object_r:hal_turbo_adapter_hwservice:s0
 vendor.lge.hardware.vss_ims::IVssIms                                    u:object_r:hal_vss_ims_hwservice:s0
 vendor.lge.hardware.biometrics.fingerprint::ILgeBiometricsFingerprint   u:object_r:hal_fingerprint_hwservice:s0
 vendor.lge.hardware.lgdata::ILgData                                     u:object_r:hal_lgdata_hwservice:s0
