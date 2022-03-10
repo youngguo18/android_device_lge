@@ -5,3 +5,4 @@ allow rild op_file:file r_file_perms;
 
 allow rild boot_status_prop:file { getattr map open read };
 
+binder_call(rild, hal_lgdata_default);

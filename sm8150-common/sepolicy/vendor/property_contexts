@@ -40,6 +40,9 @@ ro.vendor.lge.capp_cupss.persistlg.dir              u:object_r:vendor_lge_misc_p
 ro.vendor.lge.capp_cupss.rootdir                    u:object_r:vendor_lge_misc_prop:s0
 ro.vendor.lge.swversion                             u:object_r:vendor_lge_misc_prop:s0
 
+# LiveDisplay
+vendor.display.mode                                 u:object_r:vendor_display_prop:s0
+
 # NFC
 persist.vendor.ese.          u:object_r:vendor_nfc_prop:s0
 persist.vendor.nfc.          u:object_r:vendor_nfc_prop:s0

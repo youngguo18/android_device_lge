@@ -1,5 +1,8 @@
 vendor.lge.hardware.vss_ims::IVssIms                                    u:object_r:hal_vss_ims_hwservice:s0
 vendor.lge.hardware.biometrics.fingerprint::ILgeBiometricsFingerprint   u:object_r:hal_fingerprint_hwservice:s0
+vendor.lge.hardware.lgdata::ILgData                                     u:object_r:hal_lgdata_hwservice:s0
+vendor.lge.hardware.lgdata::ILgDataVendorRil                            u:object_r:hal_lgdata_hwservice:s0
+vendor.lge.hardware.powerhint.rescontrol::IResControl                   u:object_r:hal_powerhint_hwservice:s0
 vendor.lge.hardware.radio::ILgeRadio                                    u:object_r:hal_telephony_hwservice:s0
 vendor.nxp.eventprocessor::INxpEseEvtProcessor                        u:object_r:hal_secure_element_hwservice:s0
 vendor.nxp.nxpese::INxpEse                                            u:object_r:hal_secure_element_hwservice:s0

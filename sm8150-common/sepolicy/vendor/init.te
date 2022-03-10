@@ -2,7 +2,6 @@ allow init { persdata_block_device
              qni_power_file 
              sns_file }:filesystem { mount relabelfrom relabelto };
 
-
 allow init { persdata_block_device 
              qni_power_file 
              sns_file }:dir mounton;
@@ -15,8 +14,6 @@ allow init vendor_hal_perf_hwservice:hwservice_manager find;
 
 allow init persistlg_file:dir mounton;
 
-# Allow vendor_init to set vendor_nfc_prop
-set_prop(vendor_init, vendor_nfc_prop)
 
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init hwservicemanager:binder { call transfer };
@@ -27,3 +24,5 @@ allow init vendor_sysfs_kgsl:lnk_file read;
 allow init system_server:binder { call };
 allow init vendor_sysfs_battery_supply:file { setattr };
 
+allow init hal_powerhint_hwservice:hwservice_manager { add find };
+allow init hal_lgdata_hwservice:hwservice_manager { add find };
