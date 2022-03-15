@@ -13,4 +13,6 @@ allow hal_camera_default persistlg_file:dir r_dir_perms;
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, vendor_lge_misc_prop)
 
-allow hal_camera_default default_prop:file { read } ;
+allow hal_camera_default default_prop:file { read open getattr map};
+allow hal_camera_default vendor_xdsp_device:chr_file { read open ioctl};
+allow hal_camera_default sysfs:file { read open getattr};
